@@ -1,0 +1,14 @@
+CTF Nahamcon 2024
+Challenge Name: Base3200
+
+This challenge required the user to download a very large file from the challenge site (about 79MB)
+On dumping out the first and last 100 bytes of the file using the commands "heads -c 100" and "tails -c 100",
+it was observed that the file is encoded with Base64 encoding scheme. 
+
+The name of the challenge gives the hint: 3200/64 = 50
+Therefore the reason the file was so big because it was compressed and encoded 50 iterations of Base64.
+This script was coded in python to decode Base64 encoded file if similar challenge is encountered in 
+the future. 
+
+Features: Takes in user input for the number of iterations and write decoded output to file
+Usage: python3 main.py encoded_file
