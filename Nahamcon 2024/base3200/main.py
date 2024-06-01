@@ -1,7 +1,7 @@
 import base64
 import sys
 
-def decode_file(input_file, output_file='output.txt', iterations=50):
+def decode_file(input_file, iterations, output_file='output.txt'):
     with open(input_file, 'rb') as f:
         encoded_content = f.read()
 
@@ -11,13 +11,17 @@ def decode_file(input_file, output_file='output.txt', iterations=50):
 
     with open(output_file, 'wb') as f:
         f.write(decoded_content)
+    
+    print("Written to file: output.txt")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python main.py input_file")
+        print("Usage: python3 main.py input_file")
         sys.exit(1)
 
     input_file = sys.argv[1]
 
-    decode_file(input_file)
+    # Taking user input for iterations
+    iterations = int(input("Enter number of iterations: "))
 
+    decode_file(input_file, iterations)
