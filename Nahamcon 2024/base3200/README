@@ -10,5 +10,4 @@ Therefore the reason the file was so big because it was compressed and encoded 5
 This script was coded in python to decode Base64 encoded file if similar challenge is encountered in 
 the future. 
 
-Features: Takes in user input for the number of iterations and write decoded output to file
 Usage: python3 main.py encoded_file
