@@ -6,8 +6,7 @@ On dumping out the first and last 100 bytes of the file using the commands "head
 it was observed that the file is encoded with Base64 encoding scheme. 
 
 The name of the challenge gives the hint: 3200/64 = 50
-Therefore the reason the file was so big because it was compressed and encoded 50 iterations of Base64.
-This script was coded in python to decode Base64 encoded file if similar challenge is encountered in 
-the future. 
+Therefore the reason the file was so big because it was encoded 50 iterations of Base64.
+This script was coded in python to decode Base64 encoded file if similar challenge is encountered in the future. 
 
 Usage: python3 main.py encoded_file
